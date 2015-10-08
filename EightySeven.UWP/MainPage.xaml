@@ -9,7 +9,9 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel Grid.Row="1" Margin="60, 0">
+            
             <TextBox AcceptsReturn="False" PlaceholderText="Please enter a name" Margin="20, 20"></TextBox>
+            <DatePicker Margin="20, 20"></DatePicker>
             <TimePicker Margin="20, 20"></TimePicker>
         </StackPanel>
     </Grid>
