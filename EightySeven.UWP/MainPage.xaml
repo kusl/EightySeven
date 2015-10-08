@@ -9,9 +9,12 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel Grid.Row="1" Margin="60, 0">
-            <TextBox AcceptsReturn="False" PlaceholderText="Where did you enter the PATH system?" Margin="20, 20"></TextBox>
-            <DatePicker Margin="20, 20"></DatePicker>
-            <TimePicker Margin="20, 20"></TimePicker>
+            <TextBox Name="txtStationName" AcceptsReturn="False" PlaceholderText="Where did you enter the PATH system?" Margin="20, 20"></TextBox>
+            <DatePicker Name="dpEntryDate"  Margin="20, 20"></DatePicker>
+            <TimePicker Name="tpEntryTime" Margin="20, 20"></TimePicker>
+            <Button Name="btnSubmit" Margin="20, 20">
+                <TextBlock>Submit</TextBlock>
+            </Button>
         </StackPanel>
     </Grid>
 </Page>
