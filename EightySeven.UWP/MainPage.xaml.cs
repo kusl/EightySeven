@@ -33,7 +33,7 @@ namespace EightySeven.UWP
             var stationName = txtStationName.Text;
             if (!string.IsNullOrWhiteSpace(stationName))
             {
-                var date = dpEntryDate.Date.ToString();
+                var date = dpEntryDate.Date.ToString("MM/dd/yyyy", System.Globalization.CultureInfo.InvariantCulture);
                 var time = tpEntryTime.Time.ToString();
                 tbSubmissionResult.Text = String.Format("Submission succeeded at {0} on {1} of {2}", stationName, time, date);
             }
