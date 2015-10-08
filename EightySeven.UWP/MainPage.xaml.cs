@@ -28,35 +28,19 @@ namespace EightySeven.UWP
             this.InitializeComponent();
         }
 
-        private async void ButtonSubmitTapped(object sender, RoutedEventArgs e)
+        private void ButtonSubmitTapped(object sender, RoutedEventArgs e)
         {
-            MessageDialog msgbox = new MessageDialog("Would you like to greet the world with a \"Hello, world\"?", "My App");
-
-            msgbox.Commands.Clear();
-            msgbox.Commands.Add(new UICommand { Label = "Yes", Id = 0 });
-            msgbox.Commands.Add(new UICommand { Label = "No", Id = 1 });
-            msgbox.Commands.Add(new UICommand { Label = "Cancel", Id = 2 });
-
-            var res = await msgbox.ShowAsync();
-
-            if ((int)res.Id == 0)
+            var stationName = txtStationName.Text;
+            if (!string.IsNullOrWhiteSpace(stationName))
             {
-                MessageDialog msgbox2 = new MessageDialog("Hello to you too! :)", "User Response");
-                await msgbox2.ShowAsync();
+                var date = dpEntryDate.Date.ToString();
+                var time = tpEntryTime.Time.ToString();
+                tbSubmissionResult.Text = String.Format("Submission succeeded at {0} on {1} of {2}", stationName, time, date);
             }
-
-            if ((int)res.Id == 1)
+            else
             {
-                MessageDialog msgbox2 = new MessageDialog("Oh well, too bad! :(", "User Response");
-                await msgbox2.ShowAsync();
+                tbSubmissionResult.Text = String.Format("Submission failed. Cannot comprehend station name.");
             }
-
-            if ((int)res.Id == 2)
-            {
-                MessageDialog msgbox2 = new MessageDialog("Nevermind then... :|", "User Response");
-                await msgbox2.ShowAsync();
-            }
-
         }
     }
 }
