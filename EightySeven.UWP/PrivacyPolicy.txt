@@ -1,0 +1,11 @@
+﻿87 (pre-release) Privacy Statement 
+
+While in pre-release stage, 87 may collect diagnostic information. This information is only used to make the app better and is not sold, shared, transferred, or otherwise given to anyone for profit. 
+
+Please note that we will update this statement as needed. Your continued use of the app contitutes acceptance to any changes. 
+
+What data do we collect? 
+Currently, we do not collect any data other than that allowed by the Microsoft Windows Store. 
+
+How do we use the data we collect? 
+We only use the data we collect to improve our products. Information you share with us may be show up publicly though. Please exercise caution when submitting issues or pull requests. 
